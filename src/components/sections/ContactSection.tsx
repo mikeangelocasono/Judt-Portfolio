@@ -4,6 +4,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Facebook, Github, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Reveal, RevealItem, RevealStagger } from "@/components/Reveal";
 
 const ContactSection = () => {
   return (
@@ -18,7 +19,7 @@ const ContactSection = () => {
           <div className="absolute bottom-0 left-0 w-60 h-60 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
           <Sparkles className="absolute top-10 right-1/3 text-primary/20 w-5 h-5" />
 
-          <div className="lg:w-1/2 space-y-6 relative z-10 w-full text-center lg:text-left">
+          <Reveal className="lg:w-1/2 space-y-6 relative z-10 w-full text-center lg:text-left">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight">
               Let&apos;s Work<br className="hidden md:block" /> Together!
             </h2>
@@ -30,9 +31,9 @@ const ContactSection = () => {
                 Get In Touch
               </Button>
             </div>
-          </div>
+          </Reveal>
 
-          <div className={cn(
+          <Reveal delay={0.15} className={cn(
             "lg:w-5/12 p-8 md:p-10 rounded-[2rem] border relative z-10 w-full max-w-md mx-auto lg:mx-0",
             "bg-card/80 backdrop-blur-sm border-border shadow-lg"
           )}>
@@ -67,7 +68,7 @@ const ContactSection = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

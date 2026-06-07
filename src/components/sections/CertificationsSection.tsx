@@ -4,6 +4,7 @@ import React from 'react';
 import Image from "next/image";
 import { Calendar } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Reveal, RevealItem, RevealStagger } from "@/components/Reveal";
 
 const CertificationsSection = () => {
   const certifications = [
@@ -27,18 +28,18 @@ const CertificationsSection = () => {
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-14">
+        <Reveal className="text-center mb-14">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
             Accomplishments
           </span>
           <h2 className="text-4xl md:text-5xl font-serif font-bold mt-3">
             Certifications
           </h2>
-        </div>
+        </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <RevealStagger className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {certifications.map((cert, index) => (
-            <div key={index} className={cn(
+            <RevealItem key={index} className={cn(
               "group bg-card rounded-3xl border border-border overflow-hidden",
               "shadow-sm hover:shadow-xl transition-all duration-300",
               "hover:-translate-y-1"
@@ -60,9 +61,9 @@ const CertificationsSection = () => {
                   {cert.date}
                 </div>
               </div>
-            </div>
+            </RevealItem>
           ))}
-        </div>
+        </RevealStagger>
       </div>
     </section>
   );

@@ -4,6 +4,7 @@ import React from 'react';
 import Image from "next/image";
 import { GraduationCap, Table, Palette, Briefcase, CheckCircle2, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Reveal } from "@/components/Reveal";
 
 const AboutSection = () => {
   return (
@@ -13,7 +14,7 @@ const AboutSection = () => {
 
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div className="relative">
+          <Reveal className="relative">
             <div className="absolute -top-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
             <div className="relative overflow-hidden rounded-[2rem] border border-border bg-card p-3 shadow-xl group">
               <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem]">
@@ -26,9 +27,9 @@ const AboutSection = () => {
                 />
               </div>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="space-y-8">
+          <Reveal delay={0.15} className="space-y-8">
             <div>
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
                 About Me
@@ -47,7 +48,7 @@ const AboutSection = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2" id="highlights-grid">
               {[
                 { icon: GraduationCap, text: "4th-Year BSIS Student" },
                 { icon: Palette, text: "Web Design Interest" },
@@ -70,7 +71,7 @@ const AboutSection = () => {
                 );
               })}
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

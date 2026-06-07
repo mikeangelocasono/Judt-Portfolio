@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Github, Mail, Facebook, ChevronDown, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Reveal } from "@/components/Reveal";
 
 const HeroSection = () => {
   return (
@@ -15,7 +16,7 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-6 lg:px-12 xl:px-24 flex-grow flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
-          <div className="space-y-8 order-2 lg:order-1">
+          <Reveal className="space-y-8 order-2 lg:order-1">
             <div>
               <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-primary">
                 BS Information Systems Student
@@ -67,9 +68,9 @@ const HeroSection = () => {
                 </Button>
               </a>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="relative flex justify-center items-center order-1 lg:order-2">
+          <Reveal delay={0.15} className="relative flex justify-center items-center order-1 lg:order-2">
             <div className="absolute w-[90%] aspect-square bg-primary/5 rounded-full blur-3xl" />
             <div className="animate-float">
               <div className="relative w-[280px] sm:w-[340px] md:w-[400px] aspect-square">
@@ -85,13 +86,13 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
 
       <div className="relative pb-8 lg:pb-12">
         <div className="container mx-auto px-6 lg:px-12 xl:px-24">
-          <div className={cn(
+          <Reveal delay={0.3} className={cn(
             "rounded-[2rem] p-8 lg:p-10 border",
             "bg-card/80 backdrop-blur-sm border-border shadow-lg"
           )}>
@@ -111,12 +112,12 @@ const HeroSection = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </Reveal>
         </div>
+      </div>
 
-        <div className="flex justify-center mt-8">
-          <ChevronDown className="text-primary/40 w-6 h-6 animate-bounce" />
-        </div>
+      <div className="flex justify-center mt-8">
+        <ChevronDown className="text-primary/40 w-6 h-6 animate-bounce" />
       </div>
     </section>
   );

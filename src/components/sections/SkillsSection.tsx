@@ -3,6 +3,7 @@
 import React from 'react';
 import { Palette, Code, Search, Table, Briefcase, FileText, Database, MousePointer2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Reveal, RevealItem, RevealStagger } from "@/components/Reveal";
 
 const SkillsSection = () => {
   const skills = [
@@ -21,20 +22,20 @@ const SkillsSection = () => {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container mx-auto max-w-6xl text-center">
-        <div className="mb-14">
+        <Reveal className="mb-14">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
             My Expertise
           </span>
           <h2 className="text-4xl md:text-5xl font-serif font-bold mt-3">
             Skills &amp; Tools
           </h2>
-        </div>
+        </Reveal>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-4xl mx-auto">
+        <RevealStagger className="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-4xl mx-auto">
           {skills.map((skill, index) => {
             const Icon = skill.icon;
             return (
-              <div key={index} className={cn(
+              <RevealItem key={index} className={cn(
                 "flex flex-col items-center p-5 sm:p-8 rounded-2xl border transition-all duration-300",
                 "bg-card border-border shadow-sm",
                 "hover:shadow-xl hover:border-primary/30 hover:-translate-y-1"
@@ -45,10 +46,10 @@ const SkillsSection = () => {
                 <span className="font-bold text-sm">
                   {skill.name}
                 </span>
-              </div>
+              </RevealItem>
             );
           })}
-        </div>
+        </RevealStagger>
       </div>
     </section>
   );
