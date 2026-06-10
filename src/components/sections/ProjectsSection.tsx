@@ -48,7 +48,7 @@ const ProjectsSection = () => {
 
           <RevealStagger className="lg:col-span-3 space-y-6">
             <RevealItem>
-              <div className="group relative max-w-[85%] mx-auto">
+              <div className="group relative max-w-[65%] mx-auto">
               <div className="bg-card rounded-2xl border border-border shadow-xl overflow-hidden hover:shadow-2xl transition-all">
                 <div className="aspect-video relative overflow-hidden">
                   <Image
@@ -66,7 +66,7 @@ const ProjectsSection = () => {
 
             </RevealItem>
             <RevealItem>
-              <div className="group relative lg:translate-x-8 max-w-[85%] mx-auto">
+              <div className="group relative lg:translate-x-8 max-w-[65%] mx-auto">
                 <div className="bg-card rounded-2xl border border-border shadow-xl overflow-hidden hover:shadow-2xl transition-all">
                   <div className="aspect-video relative overflow-hidden">
                     <Image
