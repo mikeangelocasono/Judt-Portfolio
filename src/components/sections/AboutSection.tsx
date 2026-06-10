@@ -16,7 +16,7 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <Reveal className="relative">
             <div className="absolute -top-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-border bg-card p-3 shadow-xl group">
+            <div className="relative overflow-hidden rounded-[2rem] border border-border bg-card p-3 shadow-xl group max-w-[80%] sm:max-w-sm mx-auto">
               <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem]">
                 <Image
                   src="/Judy Profile.jpg"
