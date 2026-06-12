@@ -11,8 +11,8 @@ const ContactSection = () => {
     <section id="contact" className="section-padding">
       <div className="container mx-auto px-6 lg:px-12">
         <div className={cn(
-          "rounded-[2.5rem] p-10 md:p-16 relative overflow-hidden",
-          "flex flex-col lg:flex-row items-center justify-between gap-12 max-w-6xl mx-auto",
+          "rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden",
+          "flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 max-w-6xl mx-auto",
           "bg-card border border-border shadow-xl"
         )}>
           <div className="absolute top-0 right-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
@@ -20,7 +20,7 @@ const ContactSection = () => {
           <Sparkles className="absolute top-10 right-1/3 text-primary/20 w-5 h-5" />
 
           <Reveal className="lg:w-1/2 space-y-6 relative z-10 w-full text-center lg:text-left">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight">
               Let&apos;s Work<br className="hidden md:block" /> Together!
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-md mx-auto lg:mx-0">
@@ -34,7 +34,7 @@ const ContactSection = () => {
           </Reveal>
 
           <Reveal delay={0.15} className={cn(
-            "lg:w-5/12 p-8 md:p-10 rounded-[2rem] border relative z-10 w-full max-w-md mx-auto lg:mx-0",
+            "lg:w-5/12 p-6 md:p-8 rounded-[2rem] border relative z-10 w-full max-w-md mx-auto lg:mx-0",
             "bg-card/80 backdrop-blur-sm border-border shadow-lg"
           )}>
             <ul className="space-y-7">

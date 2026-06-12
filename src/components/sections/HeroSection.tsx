@@ -15,7 +15,7 @@ const HeroSection = () => {
       <div className="absolute bottom-[5%] left-[-10%] w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 lg:px-12 xl:px-24 flex-grow flex items-center">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
           <Reveal className="space-y-8 order-2 lg:order-1">
             <div>
               <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-primary">
@@ -23,7 +23,7 @@ const HeroSection = () => {
               </span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[72px] font-serif font-bold tracking-tight leading-[1.05]">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[60px] font-serif font-bold tracking-tight leading-[1.05]">
               Hello, I am{" "}
               <span className="text-primary">Judy Ann!</span>
             </h1>
@@ -93,7 +93,7 @@ const HeroSection = () => {
       <div className="relative pb-8 lg:pb-12">
         <div className="container mx-auto px-6 lg:px-12 xl:px-24">
           <Reveal delay={0.3} className={cn(
-            "rounded-[2rem] p-8 lg:p-10 border",
+            "rounded-[2rem] p-6 lg:p-8 border",
             "bg-card/80 backdrop-blur-sm border-border shadow-lg"
           )}>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0">

@@ -13,7 +13,7 @@ const AboutSection = () => {
       <div className="absolute bottom-0 -right-32 w-80 h-80 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <Reveal className="relative">
             <div className="absolute -top-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
             <div className="relative overflow-hidden rounded-[2rem] border border-border bg-card p-3 shadow-xl group max-w-[75%] sm:max-w-[340px] mx-auto">
@@ -29,12 +29,12 @@ const AboutSection = () => {
             </div>
           </Reveal>
 
-          <Reveal delay={0.15} className="space-y-8">
+          <Reveal delay={0.15} className="space-y-6">
             <div>
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
                 About Me
               </span>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold mt-3">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold mt-3">
                 Get to Know Me
               </h2>
             </div>
