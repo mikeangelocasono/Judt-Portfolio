@@ -43,16 +43,16 @@ const EducationExperienceSection = () => {
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container mx-auto max-w-6xl">
-        <Reveal className="text-center mb-10 lg:mb-12">
+        <Reveal className="text-center mb-8 lg:mb-10">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
             Background
           </span>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold mt-3">
+          <h2 className="text-2xl md:text-3xl font-serif font-bold mt-2">
             Education &amp; Experience
           </h2>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {timeline.map((section, idx) => (
             <Reveal key={idx}>
               <div className="flex items-center gap-3 mb-8">
@@ -77,7 +77,7 @@ const EducationExperienceSection = () => {
                       <div className="absolute left-[13px] top-[6px] w-3 h-3 rounded-full border-2 border-primary bg-background" />
 
                     <div className={cn(
-                      "p-4 sm:p-5 rounded-2xl border transition-all duration-300",
+                      "p-3 sm:p-4 rounded-2xl border transition-all duration-300",
                       "bg-card border-border shadow-sm hover:shadow-lg hover:-translate-y-0.5"
                     )}>
                       <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2">

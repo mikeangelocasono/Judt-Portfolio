@@ -34,16 +34,16 @@ const CertificationsSection = () => {
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container mx-auto max-w-6xl">
-        <Reveal className="text-center mb-10 lg:mb-12">
+        <Reveal className="text-center mb-8 lg:mb-10">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
             Accomplishments
           </span>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold mt-3">
+          <h2 className="text-2xl md:text-3xl font-serif font-bold mt-2">
             Certifications
           </h2>
         </Reveal>
 
-        <RevealStagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <RevealStagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 max-w-6xl mx-auto">
           {certifications.map((cert, index) => (
             <RevealItem key={index} className={cn(
               "group bg-card rounded-3xl border border-border overflow-hidden",
@@ -59,7 +59,7 @@ const CertificationsSection = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
-              <div className="p-5 space-y-2">
+              <div className="p-4 space-y-2">
                 <h3 className="text-xl font-bold">{cert.title}</h3>
                 <p className="text-primary font-medium text-sm">{cert.issuer}</p>
                 <div className="flex items-center text-muted-foreground text-sm">

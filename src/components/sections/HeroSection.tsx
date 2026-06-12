@@ -9,7 +9,7 @@ import { Reveal } from "@/components/Reveal";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-24 md:pt-28">
+    <section id="home" className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-20 md:pt-24">
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
       <div className="absolute top-[-20%] right-[-10%] w-[700px] h-[700px] bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-[5%] left-[-10%] w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl" />
@@ -23,7 +23,7 @@ const HeroSection = () => {
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[60px] font-serif font-bold tracking-tight leading-[1.05]">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[52px] font-serif font-bold tracking-tight leading-[1.05]">
               Hello, I am{" "}
               <span className="text-primary">Judy Ann!</span>
             </h1>

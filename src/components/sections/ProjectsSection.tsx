@@ -12,16 +12,16 @@ const ProjectsSection = () => {
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container mx-auto max-w-7xl">
-        <Reveal className="mb-10 lg:mb-12">
+        <Reveal className="mb-8 lg:mb-10">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
             Project Showcase
           </span>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold mt-3">
+          <h2 className="text-2xl md:text-3xl font-serif font-bold mt-2">
             Featured Project
           </h2>
         </Reveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-10 items-center">
           <Reveal className="lg:col-span-2 space-y-6">
             <h3 className="text-xl md:text-2xl font-serif font-bold">
               IGPIMS &mdash; Davao del Norte State College Federal Student Government System
