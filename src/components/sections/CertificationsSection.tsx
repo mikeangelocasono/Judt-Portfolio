@@ -19,6 +19,12 @@ const CertificationsSection = () => {
       issuer: "CISCO Networking Academy",
       date: "2025",
       image: "/Ethical Hacker.jpg",
+    },
+    {
+      title: "Binhi",
+      issuer: "Certificate of Completion",
+      date: "2026",
+      image: "/Binhi.jpg",
     }
   ];
 
@@ -37,7 +43,7 @@ const CertificationsSection = () => {
           </h2>
         </Reveal>
 
-        <RevealStagger className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <RevealStagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {certifications.map((cert, index) => (
             <RevealItem key={index} className={cn(
               "group bg-card rounded-3xl border border-border overflow-hidden",
