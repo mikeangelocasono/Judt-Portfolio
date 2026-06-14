@@ -25,6 +25,30 @@ const CertificationsSection = () => {
       issuer: "Certificate of Completion",
       date: "2026",
       image: "/Binhi.jpg",
+    },
+    {
+      title: "Tree Planting Certificate",
+      issuer: "Certificate",
+      date: "2026",
+      image: "/Tree Planting Certificate.jpg",
+    },
+    {
+      title: "Best Poster Presentation",
+      issuer: "Award",
+      date: "2026",
+      image: "/Best Poster Presentation.jpg",
+    },
+    {
+      title: "Best Capstone Project",
+      issuer: "Award",
+      date: "2026",
+      image: "/Best Capstone Project.jpg",
+    },
+    {
+      title: "Best Project Exhibit Design",
+      issuer: "Award",
+      date: "2026",
+      image: "/Best Project Exhibit Design.jpg",
     }
   ];
 
