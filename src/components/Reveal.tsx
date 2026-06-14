@@ -2,13 +2,13 @@
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
-interface RevealProps {
+interface RevealProps extends React.HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
   className?: string;
   delay?: number;
 }
 
-export function Reveal({ children, className, delay = 0 }: RevealProps) {
+export function Reveal({ children, className, delay = 0, ...props }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -46,17 +46,18 @@ export function Reveal({ children, className, delay = 0 }: RevealProps) {
         transition: `opacity 0.6s ease-out, transform 0.6s ease-out`,
         transitionDelay: `${delay}s`,
       }}
+      {...props}
     >
       {children}
     </div>
   );
 }
 
-export function RevealStagger({ children, className }: { children: ReactNode; className?: string }) {
-  return <div className={className}>{children}</div>;
+export function RevealStagger({ children, className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
+  return <div className={className} {...props}>{children}</div>;
 }
 
-export function RevealItem({ children, className, delay = 0 }: RevealProps) {
+export function RevealItem({ children, className, delay = 0, ...props }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -94,6 +95,7 @@ export function RevealItem({ children, className, delay = 0 }: RevealProps) {
         transition: `opacity 0.5s ease-out, transform 0.5s ease-out`,
         transitionDelay: `${delay}s`,
       }}
+      {...props}
     >
       {children}
     </div>

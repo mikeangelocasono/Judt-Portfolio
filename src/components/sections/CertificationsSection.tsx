@@ -1,10 +1,16 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from "next/image";
 import { Calendar } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Reveal, RevealItem, RevealStagger } from "@/components/Reveal";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 const CertificationsSection = () => {
   const certifications = [
@@ -52,6 +58,8 @@ const CertificationsSection = () => {
     }
   ];
 
+  const [selectedCert, setSelectedCert] = useState<typeof certifications[0] | null>(null);
+
   return (
     <section id="certifications" className="section-padding relative overflow-hidden">
       <div className="absolute top-0 right-0 w-80 h-80 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
@@ -69,11 +77,15 @@ const CertificationsSection = () => {
 
         <RevealStagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 max-w-6xl mx-auto">
           {certifications.map((cert, index) => (
-            <RevealItem key={index} className={cn(
-              "group bg-card rounded-3xl border border-border overflow-hidden",
-              "shadow-sm hover:shadow-xl transition-all duration-300",
-              "hover:-translate-y-1"
-            )}>
+            <RevealItem 
+              key={index} 
+              className={cn(
+                "group bg-card rounded-3xl border border-border overflow-hidden cursor-pointer",
+                "shadow-sm hover:shadow-xl transition-all duration-300",
+                "hover:-translate-y-1"
+              )}
+              onClick={() => setSelectedCert(cert)}
+            >
               <div className="aspect-[16/10] relative overflow-hidden">
                 <Image
                   src={cert.image}
@@ -95,6 +107,28 @@ const CertificationsSection = () => {
           ))}
         </RevealStagger>
       </div>
+
+      <Dialog open={!!selectedCert} onOpenChange={(open) => !open && setSelectedCert(null)}>
+        <DialogContent className="max-w-[95vw] md:max-w-[85vw] lg:max-w-[1200px] w-full h-[85vh] p-4 sm:p-6 flex flex-col overflow-hidden bg-card border-border shadow-2xl">
+          <DialogHeader className="mb-2 shrink-0">
+            <DialogTitle className="text-xl md:text-2xl font-serif font-bold tracking-tight">
+              {selectedCert?.title}
+            </DialogTitle>
+          </DialogHeader>
+          <div className="relative w-full flex-1 min-h-0 bg-black/5 dark:bg-white/5 rounded-xl border border-border/50">
+            {selectedCert && (
+              <Image
+                src={selectedCert.image}
+                alt={selectedCert.title}
+                fill
+                className="object-contain p-2 sm:p-4"
+                sizes="95vw"
+                priority
+              />
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
