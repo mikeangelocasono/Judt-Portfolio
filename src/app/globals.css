@@ -10,10 +10,8 @@
     --card-foreground: 265 16% 15%;
     --popover: 300 85% 94%; /* Soft surface #FCE5FC */
     --popover-foreground: 265 16% 15%;
-    --primary: 248 89% 69%; /* Keep current primary for consistency but maybe soft accent */
-    /* Let's use the provided light-accent-soft as primary if they want: #E7C6FF */
-    --primary: 275 100% 89%; 
-    --primary-foreground: 265 16% 15%;
+    --primary: 246 89% 66%; /* Strong dark purple #6D5DF6 for readability and buttons */
+    --primary-foreground: 0 0% 100%; /* White text on primary buttons */
     --secondary: 300 85% 94%; /* #FCE5FC */
     --secondary-foreground: 265 16% 15%;
     --muted: 300 85% 94%; /* #FCE5FC */
